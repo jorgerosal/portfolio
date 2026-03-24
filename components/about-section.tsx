@@ -7,7 +7,7 @@ import { profile } from "@/data/portfolio";
 
 export function AboutSection() {
   return (
-    <section id="about" className="border-b border-line">
+    <section id="about" className="section-shell border-b border-line">
       <div className="mx-auto grid max-w-7xl gap-12 px-6 py-20 lg:grid-cols-[minmax(0,1.2fr)_360px] lg:px-8">
         <Reveal>
           <SectionHeading
@@ -15,7 +15,7 @@ export function AboutSection() {
             title="A systems-minded engineer focused on dependable delivery and operational clarity."
             description={profile.about}
           />
-          <div className="mt-8 max-w-3xl rounded-[1.75rem] border border-line bg-white/72 p-7 shadow-card">
+          <div className="mt-8 max-w-3xl rounded-[1.9rem] border border-line technical-panel p-7 shadow-card">
             <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
               <div>
                 <p className="text-sm uppercase tracking-[0.24em] text-muted">
@@ -41,14 +41,14 @@ export function AboutSection() {
         </Reveal>
 
         <Reveal delay={0.08}>
-          <aside className="rounded-[1.75rem] border border-line bg-white/80 p-7 shadow-soft">
+          <aside className="rounded-[1.9rem] border border-line technical-panel p-7 shadow-soft">
             <p className="text-sm uppercase tracking-[0.24em] text-muted">
               Profile Details
             </p>
             <div className="mt-6 space-y-4 text-sm text-muted">
               <div className="rounded-2xl border border-line bg-background/80 p-4">
                 <div className="flex items-start gap-3">
-                  <MapPin size={18} className="mt-0.5 text-accent" />
+                  <MapPin size={18} className="icon-shift mt-0.5 text-accent" />
                   <div>
                     <p className="font-medium text-foreground">Location</p>
                     <p className="mt-1">{profile.location}</p>
@@ -57,7 +57,7 @@ export function AboutSection() {
               </div>
               <div className="rounded-2xl border border-line bg-background/80 p-4">
                 <div className="flex items-start gap-3">
-                  <Mail size={18} className="mt-0.5 text-accent" />
+                  <Mail size={18} className="icon-shift mt-0.5 text-accent" />
                   <div>
                     <p className="font-medium text-foreground">Email</p>
                     <Link
@@ -71,7 +71,7 @@ export function AboutSection() {
               </div>
               <div className="rounded-2xl border border-line bg-background/80 p-4">
                 <div className="flex items-start gap-3">
-                  <Linkedin size={18} className="mt-0.5 text-accent" />
+                  <Linkedin size={18} className="icon-shift mt-0.5 text-accent" />
                   <div>
                     <p className="font-medium text-foreground">LinkedIn</p>
                     <Link
@@ -86,7 +86,7 @@ export function AboutSection() {
               </div>
               <div className="rounded-2xl border border-line bg-background/80 p-4">
                 <div className="flex items-start gap-3">
-                  <GraduationCap size={18} className="mt-0.5 text-accent" />
+                  <GraduationCap size={18} className="icon-shift mt-0.5 text-accent" />
                   <div>
                     <p className="font-medium text-foreground">Education</p>
                     <p className="mt-1">{profile.education}</p>

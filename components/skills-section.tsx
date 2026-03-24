@@ -1,10 +1,11 @@
 import { Reveal } from "@/components/reveal";
 import { SectionHeading } from "@/components/section-heading";
+import { WorkflowMiniGraphic } from "@/components/system-graphics";
 import { skillGroups } from "@/data/portfolio";
 
 export function SkillsSection() {
   return (
-    <section id="skills" className="border-b border-line">
+    <section id="skills" className="section-shell border-b border-line">
       <div className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
         <Reveal>
           <SectionHeading
@@ -20,20 +21,24 @@ export function SkillsSection() {
 
             return (
               <Reveal key={group.title} delay={index * 0.06}>
-                <article className="h-full rounded-[1.75rem] border border-line bg-white/72 p-7 shadow-card">
+                <article className="group relative h-full overflow-hidden rounded-[1.85rem] border border-line technical-panel p-7 shadow-card">
+                  <div className="absolute right-0 top-0 h-24 w-24 opacity-70">
+                    <WorkflowMiniGraphic />
+                  </div>
                   <div className="flex items-center gap-4">
                     <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-accent-soft text-accent">
-                      <Icon size={22} />
+                      <Icon size={22} className="icon-shift" />
                     </div>
                     <h3 className="font-display text-2xl font-semibold tracking-tight text-foreground">
                       {group.title}
                     </h3>
                   </div>
+                  <div className="technical-divider mt-5 h-px w-full" />
                   <div className="mt-6 flex flex-wrap gap-3">
                     {group.items.map((item) => (
                       <span
                         key={item}
-                        className="rounded-full border border-line bg-background/80 px-4 py-2 text-sm text-foreground"
+                        className="rounded-full border border-line bg-background/82 px-4 py-2 text-sm text-foreground transition-colors duration-300 group-hover:border-accent/20"
                       >
                         {item}
                       </span>

@@ -157,6 +157,7 @@ export const caseStudies = [
   {
     title: "Amazon Product Advertising API Integration",
     label: "Representative Case Study",
+    category: "API integration tooling",
     subtitle: "Amazon Product Advertising API Integration for Node.js Developers",
     summary:
       "Developed and published a Node.js module wrapper for Amazon Product Advertising API workflows, then supported real-world integrations for advertisers and developers building custom product tools, catalog workflows, and related automation.",
@@ -173,14 +174,20 @@ export const caseStudies = [
     ],
     impact:
       "Improved developer usability for Amazon PA API integrations and enabled faster implementation across custom internal tools and advertiser workflows.",
+    metadata: [
+      { label: "System", value: "API wrapper + service integration" },
+      { label: "Delivery", value: "Published npm package" },
+      { label: "Primary signal", value: "Faster partner implementation" },
+    ],
     link: "https://www.npmjs.com/package/amazon-paapi",
     linkLabel: "View NPM Package",
-    imageSrc: null,
-    imageAlt: null,
+    imageSrc: "/assets/uncategorized/npm amazon paapi.png",
+    imageAlt: "Amazon Product Advertising API integration screenshot",
   },
   {
     title: "Multi-Source Analytics Dashboard Platform",
     label: "Representative Case Study",
+    category: "Analytics SaaS platform",
     subtitle: "Internal Decision-Support SaaS for FBA Inventory and Business Insights",
     summary:
       "Designed and helped build an internal analytics platform that consolidated multi-source operational data into a single decision-support system for FBA inventory management and business insights.",
@@ -201,12 +208,18 @@ export const caseStudies = [
     ],
     impact:
       "Processed 1M+ records, improved business visibility across inventory and operational data, and reduced fragmented reporting and manual analysis.",
+    metadata: [
+      { label: "System", value: "Internal analytics command center" },
+      { label: "Scale", value: "1M+ records processed" },
+      { label: "Primary signal", value: "Unified business visibility" },
+    ],
     imageSrc: null,
     imageAlt: null,
   },
   {
     title: "High-Volume Workflow Automation Pipeline",
     label: "Representative Case Study",
+    category: "Automation pipeline",
     subtitle: "MAP Price Monitoring and Enforcement Automation",
     summary:
       "Built a high-volume automation pipeline for MAP price monitoring and enforcement workflows using headless browser automation, rotating proxies, and distributed Node.js workers.",
@@ -224,6 +237,11 @@ export const caseStudies = [
     ],
     impact:
       "Increased daily processing from roughly 50 manual investigations to 10,000+ automated checks, dramatically improving throughput and reducing repetitive manual work.",
+    metadata: [
+      { label: "System", value: "Distributed monitoring pipeline" },
+      { label: "Scale", value: "10,000+ checks per day" },
+      { label: "Primary signal", value: "Massive throughput gains" },
+    ],
     link: "https://channelprecision.com/our-tech/mapwatcher/",
     linkLabel: "View MAP Watcher",
     imageSrc: "/assets/work/price-watcher.webp",
@@ -232,6 +250,7 @@ export const caseStudies = [
   {
     title: "Robotic Process Automation for Multi-Channel Order Operations",
     label: "Representative Case Study",
+    category: "RPA operations system",
     subtitle: "High-Volume Back-Office Automation Before the AI Automation Era",
     summary:
       "Developed robotic process automation workflows using WinAutomation and custom multi-threaded worker logic to automate high-volume back-office tasks across multiple sales and order channels.",
@@ -248,6 +267,11 @@ export const caseStudies = [
     ],
     impact:
       "Automated tens of thousands of repetitive entries, improved speed and consistency across order operations, and reduced reliance on manual back-office processing.",
+    metadata: [
+      { label: "System", value: "RPA workflows + worker threads" },
+      { label: "Delivery", value: "Order ops automation" },
+      { label: "Primary signal", value: "Higher speed and consistency" },
+    ],
     imageSrc: "/assets/work/winautomation.png",
     imageAlt: "WinAutomation platform visual used for robotic process automation workflows",
   },

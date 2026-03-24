@@ -4,6 +4,8 @@
 
 :root {
   color-scheme: light;
+  --pattern-dot: rgba(53, 88, 168, 0.12);
+  --pattern-line: rgba(19, 21, 26, 0.06);
 }
 
 html {
@@ -13,7 +15,8 @@ html {
 body {
   min-height: 100vh;
   background:
-    radial-gradient(circle at top, rgba(53, 88, 168, 0.08), transparent 30%),
+    radial-gradient(circle at top, rgba(53, 88, 168, 0.1), transparent 30%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.45), rgba(255, 255, 255, 0)),
     #f6f5f2;
 }
 
@@ -32,6 +35,35 @@ button {
     transform 200ms ease;
 }
 
+@media (prefers-reduced-motion: no-preference) {
+  .icon-shift {
+    transition:
+      transform 220ms ease,
+      color 220ms ease,
+      opacity 220ms ease;
+  }
+
+  .group:hover .icon-shift,
+  .group:focus-visible .icon-shift {
+    transform: translateY(-2px) scale(1.04);
+  }
+
+  .cta-arrow {
+    transition: transform 220ms ease;
+  }
+
+  .group:hover .cta-arrow,
+  .group:focus-visible .cta-arrow {
+    transform: translate(3px, -2px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 @layer base {
   * {
     @apply border-line;
@@ -39,5 +71,54 @@ button {
 
   body {
     @apply text-foreground;
+  }
+}
+
+@layer utilities {
+  .section-shell {
+    position: relative;
+    isolation: isolate;
+  }
+
+  .section-shell::before {
+    content: "";
+    position: absolute;
+    inset: 24px;
+    z-index: -1;
+    border-radius: 2rem;
+    border: 1px solid rgba(19, 21, 26, 0.04);
+    background:
+      radial-gradient(circle at top right, rgba(53, 88, 168, 0.06), transparent 28%),
+      linear-gradient(180deg, rgba(255, 255, 255, 0.44), rgba(255, 255, 255, 0.12));
+    pointer-events: none;
+  }
+
+  .technical-panel {
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.78)),
+      radial-gradient(circle at top right, rgba(53, 88, 168, 0.08), transparent 35%);
+  }
+
+  .technical-pattern {
+    background-image:
+      radial-gradient(circle at 1px 1px, var(--pattern-dot) 1.2px, transparent 0),
+      linear-gradient(var(--pattern-line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--pattern-line) 1px, transparent 1px);
+    background-size: 18px 18px, 36px 36px, 36px 36px;
+    background-position: center;
+  }
+
+  .technical-divider {
+    position: relative;
+  }
+
+  .technical-divider::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    height: 1px;
+    width: 100%;
+    background: linear-gradient(90deg, rgba(53, 88, 168, 0.18), rgba(19, 21, 26, 0.03));
   }
 }

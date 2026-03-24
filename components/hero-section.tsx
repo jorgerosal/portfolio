@@ -4,31 +4,28 @@ import {
   Github,
   Linkedin,
   Mail,
-  MapPin,
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
 import { Reveal } from "@/components/reveal";
-import { heroHighlights, heroStats, profile } from "@/data/portfolio";
+import { heroHighlights, profile } from "@/data/portfolio";
 
 export function HeroSection() {
   return (
     <section
       id="home"
-      className="relative overflow-hidden border-b border-line"
+      className="section-shell relative overflow-hidden border-b border-line"
       aria-label="Intro"
     >
-      <div className="absolute inset-0 bg-fine-grid bg-[size:36px_36px] opacity-30" />
-      <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-accent-soft/70 to-transparent" />
+      <div className="technical-pattern absolute inset-0 opacity-40" />
+      <div className="absolute inset-x-0 top-0 h-48 bg-gradient-to-b from-accent-soft/75 to-transparent" />
+      <div className="absolute left-[-5rem] top-24 h-56 w-56 rounded-full bg-accent/10 blur-3xl" />
+      <div className="absolute bottom-10 right-[-4rem] h-48 w-48 rounded-full bg-[#cfe0da] blur-3xl" />
 
-      <div className="relative mx-auto grid max-w-7xl gap-12 px-6 py-20 lg:grid-cols-[minmax(0,1.25fr)_380px] lg:px-8 lg:py-28">
+      <div className="relative mx-auto grid max-w-7xl gap-12 px-6 py-20 lg:grid-cols-[minmax(0,1.18fr)_420px] lg:px-8 lg:py-28">
         <Reveal className="max-w-3xl">
-          <p className="inline-flex items-center gap-2 rounded-full border border-accent/15 bg-white/80 px-4 py-2 text-sm text-muted shadow-card backdrop-blur">
-            <MapPin size={16} className="text-accent" />
-            Based in {profile.location}
-          </p>
-          <p className="mt-8 text-sm font-semibold uppercase tracking-[0.24em] text-muted">
+          <p className="text-sm font-semibold uppercase tracking-[0.24em] text-muted">
             {profile.name}
           </p>
           <h1 className="mt-6 font-display text-5xl font-semibold tracking-[-0.04em] text-foreground sm:text-6xl lg:text-7xl">
@@ -47,41 +44,33 @@ export function HeroSection() {
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
             <Link
               href="#contact"
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-foreground px-6 py-3.5 text-sm font-medium text-white transition-transform duration-200 hover:-translate-y-0.5"
+              className="group inline-flex items-center justify-center gap-2 rounded-full bg-foreground px-6 py-3.5 text-sm font-medium text-white transition-transform duration-200 hover:-translate-y-0.5"
             >
               Contact Jorge
-              <ArrowUpRight size={16} />
+              <ArrowUpRight size={16} className="cta-arrow" />
             </Link>
             <Link
               href={profile.cvHref}
               target="_blank"
-              className="inline-flex items-center justify-center gap-2 rounded-full border border-line bg-white/80 px-6 py-3.5 text-sm font-medium text-foreground transition-colors hover:border-accent/30 hover:bg-accent-soft"
+              className="group inline-flex items-center justify-center gap-2 rounded-full border border-line bg-white/85 px-6 py-3.5 text-sm font-medium text-foreground transition-colors hover:border-accent/30 hover:bg-accent-soft"
             >
               Download CV
-              <Download size={16} />
+              <Download size={16} className="icon-shift" />
             </Link>
           </div>
 
-          <div className="mt-10 flex flex-wrap gap-3">
-            {heroStats.map((stat) => (
-              <div
-                key={stat}
-                className="rounded-full border border-line bg-white/78 px-4 py-2 text-sm text-foreground shadow-card backdrop-blur"
-              >
-                {stat}
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-10 grid gap-4 rounded-[1.75rem] border border-line bg-white/76 p-5 shadow-card sm:grid-cols-3">
+          <div className="mt-10 grid gap-4 rounded-[1.9rem] border border-line technical-panel p-5 shadow-card sm:grid-cols-3">
             {heroHighlights.map((item) => (
               <div
                 key={item.label}
-                className="rounded-[1.25rem] border border-line bg-background/80 p-4"
+                className="group rounded-[1.35rem] border border-line bg-background/80 p-4 transition-transform duration-300 hover:-translate-y-1"
               >
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-muted">
-                  {item.label}
-                </p>
+                <div className="flex items-center justify-between gap-3">
+                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-muted">
+                    {item.label}
+                  </p>
+                  <span className="h-2.5 w-2.5 rounded-full bg-accent/70 transition-transform duration-300 group-hover:scale-125" />
+                </div>
                 <p className="mt-2 text-sm leading-6 text-foreground">
                   {item.value}
                 </p>
@@ -91,9 +80,10 @@ export function HeroSection() {
         </Reveal>
 
         <Reveal delay={0.1}>
-          <div className="relative mx-auto max-w-sm rounded-[2rem] border border-white/75 bg-white/78 p-5 shadow-soft backdrop-blur-xl">
+          <div className="relative mx-auto max-w-[26rem] rounded-[2.2rem] border border-white/75 technical-panel p-5 shadow-soft backdrop-blur-xl">
             <div className="absolute inset-x-6 top-0 h-px bg-gradient-to-r from-transparent via-accent/60 to-transparent" />
-            <div className="relative overflow-hidden rounded-[1.5rem] border border-line bg-[#dfe5f2]">
+            <div className="relative overflow-hidden rounded-[1.7rem] border border-line bg-[#edf2fb]">
+              <div className="absolute inset-0 technical-pattern opacity-35" />
               <div className="absolute inset-0 bg-gradient-to-br from-white/60 via-transparent to-accent/15" />
               <Image
                 src={profile.imageSrc}
@@ -101,11 +91,11 @@ export function HeroSection() {
                 width={800}
                 height={1000}
                 priority
-                className="h-full w-full object-cover"
+                className="h-full min-h-[32rem] w-full object-cover"
               />
             </div>
 
-            <div className="mt-5 rounded-[1.5rem] border border-line bg-background/80 p-5">
+            <div className="mt-5 rounded-[1.7rem] border border-line bg-background/82 p-5">
               <div className="flex items-center justify-between gap-3">
                 <div>
                   <p className="text-sm uppercase tracking-[0.2em] text-muted">
@@ -142,25 +132,25 @@ export function HeroSection() {
               <div className="mt-5 flex flex-wrap gap-2">
                 <Link
                   href={`mailto:${profile.email}`}
-                  className="inline-flex items-center gap-2 rounded-full border border-line bg-white/80 px-3 py-2 text-xs font-medium text-foreground hover:border-accent/25"
+                  className="group inline-flex items-center gap-2 rounded-full border border-line bg-white/80 px-3 py-2 text-xs font-medium text-foreground hover:border-accent/25"
                 >
-                  <Mail size={14} />
+                  <Mail size={14} className="icon-shift" />
                   Email
                 </Link>
                 <Link
                   href={profile.linkedin}
                   target="_blank"
-                  className="inline-flex items-center gap-2 rounded-full border border-line bg-white/80 px-3 py-2 text-xs font-medium text-foreground hover:border-accent/25"
+                  className="group inline-flex items-center gap-2 rounded-full border border-line bg-white/80 px-3 py-2 text-xs font-medium text-foreground hover:border-accent/25"
                 >
-                  <Linkedin size={14} />
+                  <Linkedin size={14} className="icon-shift" />
                   LinkedIn
                 </Link>
                 <Link
                   href={profile.github}
                   target="_blank"
-                  className="inline-flex items-center gap-2 rounded-full border border-line bg-white/80 px-3 py-2 text-xs font-medium text-foreground hover:border-accent/25"
+                  className="group inline-flex items-center gap-2 rounded-full border border-line bg-white/80 px-3 py-2 text-xs font-medium text-foreground hover:border-accent/25"
                 >
-                  <Github size={14} />
+                  <Github size={14} className="icon-shift" />
                   GitHub
                 </Link>
               </div>

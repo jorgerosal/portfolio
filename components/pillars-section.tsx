@@ -1,10 +1,11 @@
 import { Reveal } from "@/components/reveal";
 import { SectionHeading } from "@/components/section-heading";
+import { NetworkPattern } from "@/components/system-graphics";
 import { pillars } from "@/data/portfolio";
 
 export function PillarsSection() {
   return (
-    <section className="border-b border-line">
+    <section className="section-shell border-b border-line">
       <div className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
         <Reveal>
           <SectionHeading
@@ -20,11 +21,15 @@ export function PillarsSection() {
 
             return (
               <Reveal key={pillar.title} delay={index * 0.08}>
-                <article className="group h-full rounded-[1.75rem] border border-line bg-white/72 p-7 shadow-card transition-all duration-300 hover:-translate-y-1 hover:shadow-soft">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-accent-soft text-accent">
-                    <Icon size={22} />
+                <article className="group relative h-full overflow-hidden rounded-[1.9rem] border border-line technical-panel p-7 shadow-card transition-all duration-300 hover:-translate-y-1 hover:shadow-soft">
+                  <div className="absolute right-4 top-4 h-20 w-24 opacity-70">
+                    <NetworkPattern />
                   </div>
-                  <h3 className="mt-6 font-display text-2xl font-semibold tracking-tight text-foreground">
+                  <div className="relative flex h-12 w-12 items-center justify-center rounded-2xl bg-accent-soft text-accent">
+                    <Icon size={22} className="icon-shift" />
+                  </div>
+                  <div className="technical-divider mt-6 h-px w-24" />
+                  <h3 className="mt-6 max-w-[14rem] font-display text-2xl font-semibold tracking-tight text-foreground">
                     {pillar.title}
                   </h3>
                   <p className="mt-4 text-base leading-7 text-muted">

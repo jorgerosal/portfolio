@@ -40,43 +40,38 @@ const contactItems = [
 
 export function ContactSection() {
   return (
-    <section id="contact" className="border-b border-line">
+    <section id="contact" className="section-shell border-b border-line">
       <div className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
         <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_420px]">
           <Reveal>
-            <div className="rounded-[2rem] border border-line bg-white/78 p-8 shadow-soft sm:p-10">
+            <div className="rounded-[2rem] border border-line technical-panel p-8 shadow-soft sm:p-10">
               <SectionHeading
                 eyebrow="Contact"
                 title="Open to senior engineering, systems, and technical delivery conversations."
                 description="If you need someone who can move between architecture, implementation, automation, and business-aware execution, reach out directly. I am open to conversations with recruiters, founders, hiring managers, and engineering leaders."
               />
-              <div className="mt-8 rounded-[1.5rem] border border-line bg-background/80 p-5">
-                <p className="text-sm leading-7 text-foreground/85">
-                  Best for roles or engagements involving internal platforms, API-heavy systems, automation, analytics workflows, or hands-on technical leadership.
-                </p>
-              </div>
               <div className="mt-10 flex flex-col gap-4 sm:flex-row">
                 <Link
                   href={`mailto:${profile.email}`}
-                  className="inline-flex items-center justify-center gap-2 rounded-full bg-foreground px-6 py-3.5 text-sm font-medium text-white transition-transform duration-200 hover:-translate-y-0.5"
+                  className="group inline-flex items-center justify-center gap-2 rounded-full bg-foreground px-6 py-3.5 text-sm font-medium text-white transition-transform duration-200 hover:-translate-y-0.5"
                 >
                   Email Jorge
-                  <ArrowUpRight size={16} />
+                  <ArrowUpRight size={16} className="cta-arrow" />
                 </Link>
                 <Link
                   href={profile.linkedin}
-                  className="inline-flex items-center justify-center gap-2 rounded-full border border-line bg-background/80 px-6 py-3.5 text-sm font-medium text-foreground hover:border-accent/30 hover:bg-accent-soft"
+                  className="group inline-flex items-center justify-center gap-2 rounded-full border border-line bg-background/80 px-6 py-3.5 text-sm font-medium text-foreground hover:border-accent/30 hover:bg-accent-soft"
                   target="_blank"
                 >
                   View LinkedIn
-                  <ArrowUpRight size={16} />
+                  <ArrowUpRight size={16} className="cta-arrow" />
                 </Link>
               </div>
             </div>
           </Reveal>
 
           <Reveal delay={0.08}>
-            <aside className="rounded-[2rem] border border-line bg-white/72 p-7 shadow-card">
+            <aside className="rounded-[2rem] border border-line technical-panel p-7 shadow-card">
               <p className="text-sm uppercase tracking-[0.24em] text-muted">
                 Direct Contact
               </p>
@@ -89,10 +84,10 @@ export function ContactSection() {
                       key={item.label}
                       href={item.href}
                       target={item.label === "Location" ? "_blank" : undefined}
-                      className="flex items-start gap-4 rounded-[1.5rem] border border-line bg-background/80 p-4 transition-colors hover:border-accent/25 hover:bg-accent-soft/60"
+                      className="group flex items-start gap-4 rounded-[1.5rem] border border-line bg-background/80 p-4 transition-colors hover:border-accent/25 hover:bg-accent-soft/60"
                     >
                       <div className="mt-0.5 flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-white text-accent shadow-card">
-                        <Icon size={18} />
+                        <Icon size={18} className="icon-shift" />
                       </div>
                       <div>
                         <p className="text-sm font-medium uppercase tracking-[0.16em] text-muted">

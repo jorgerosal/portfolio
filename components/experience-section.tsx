@@ -6,7 +6,7 @@ import { experience } from "@/data/portfolio";
 
 export function ExperienceSection() {
   return (
-    <section id="experience" className="border-b border-line">
+    <section id="experience" className="section-shell border-b border-line">
       <div className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
         <Reveal>
           <SectionHeading
@@ -16,14 +16,15 @@ export function ExperienceSection() {
           />
         </Reveal>
 
-        <div className="relative mt-14 space-y-8 before:absolute before:bottom-0 before:left-5 before:top-0 before:w-px before:bg-line sm:before:left-8">
+        <div className="relative mt-14 space-y-8 before:absolute before:bottom-0 before:left-5 before:top-0 before:w-px before:bg-gradient-to-b before:from-accent/35 before:via-accent/15 before:to-transparent sm:before:left-8">
           {experience.map((item, index) => (
             <Reveal key={`${item.company}-${item.role}`} delay={index * 0.08}>
-              <article className={`relative rounded-[2rem] border p-7 shadow-card sm:ml-16 sm:p-8 ${
+              <article className={`relative overflow-hidden rounded-[2rem] border p-7 shadow-card sm:ml-16 sm:p-8 ${
                 item.emphasis === "transition"
                   ? "border-accent/12 bg-accent-soft/35"
-                  : "border-line bg-white/76"
+                  : "border-line technical-panel"
               }`}>
+                <div className="technical-pattern absolute inset-y-0 right-0 w-40 opacity-25" />
                 <span className="absolute left-[-2.6rem] top-10 hidden h-4 w-4 rounded-full border-4 border-background bg-accent sm:block" />
                 <div className="flex flex-col gap-5 md:flex-row md:items-start md:justify-between">
                   <div>
@@ -52,11 +53,11 @@ export function ExperienceSection() {
                   {item.highlights.map((highlight) => (
                     <div
                       key={highlight}
-                      className="flex gap-3 rounded-2xl border border-line bg-background/70 px-4 py-4"
+                      className="group flex gap-3 rounded-2xl border border-line bg-background/70 px-4 py-4"
                     >
                       <ArrowRight
                         size={16}
-                        className="mt-1 shrink-0 text-accent"
+                        className="icon-shift mt-1 shrink-0 text-accent"
                       />
                       <p className="text-sm leading-7 text-muted">{highlight}</p>
                     </div>
