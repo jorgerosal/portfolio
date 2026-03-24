@@ -26,6 +26,9 @@ export function AboutSection() {
               external APIs, designing reporting systems, or removing manual
               work through automation.
             </p>
+            <p className="mt-5 text-base leading-8 text-muted">
+              {profile.careerBreak}
+            </p>
           </div>
         </Reveal>
 

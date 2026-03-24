@@ -47,6 +47,17 @@ export const pillars = [
 
 export const experience = [
   {
+    company: "Career Break",
+    role: "Field Missionary Work",
+    period: "September 2023-January 2026",
+    summary:
+      "Took a purposeful career break to pursue full-time field missionary work, centered on service, communication, discipline, and community engagement.",
+    highlights: [
+      "Now returning to software and systems work with core engineering fundamentals, architecture experience, and systems thinking intact.",
+      "Using modern AI-assisted workflows to accelerate implementation, iteration, and delivery while building on prior full-stack and automation experience.",
+    ],
+  },
+  {
     company: "Amazon",
     role: "Software Developer",
     period: "2021-2023",
@@ -240,5 +251,7 @@ export const profile = {
     "Senior full-stack engineer with 10+ years of experience delivering API-driven platforms, analytics tooling, and cloud-backed systems across engineering and project leadership roles.",
   about:
     "I design and ship software systems that solve operational problems clearly and reliably. My background spans full-stack engineering, automation architecture, analytics tooling, and technical delivery leadership, with a focus on translating business complexity into maintainable systems built with Node.js, React, SQL, and cloud infrastructure.",
+  careerBreak:
+    "After a purposeful period of full-time field missionary work from September 2023 to January 2026, I am now re-engaging with software and systems development with strong engineering fundamentals, architecture experience, and a modern AI-assisted workflow that helps accelerate implementation and delivery.",
   education: "Visayas State University, BS in Computer Science (2006-2010)",
 };
