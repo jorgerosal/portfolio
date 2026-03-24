@@ -1,4 +1,5 @@
-import { GraduationCap, Linkedin, Mail, MapPin } from "lucide-react";
+import { GraduationCap, Heart, Linkedin, Mail, MapPin } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
 import { Reveal } from "@/components/reveal";
@@ -35,6 +36,60 @@ export function AboutSection() {
                 <p className="mt-4 text-sm leading-7 text-foreground/85">
                   {profile.careerBreak}
                 </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-6 max-w-3xl rounded-[1.9rem] border border-line technical-panel p-6 shadow-card">
+            <div className="flex items-center gap-3">
+              <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-accent-soft text-accent">
+                <Heart size={18} className="icon-shift" />
+              </div>
+              <div>
+                <p className="text-sm uppercase tracking-[0.24em] text-muted">
+                  Beyond Work
+                </p>
+                <p className="mt-1 text-base font-medium text-foreground">
+                  A small personal note
+                </p>
+              </div>
+            </div>
+
+            <p className="mt-4 max-w-2xl text-sm leading-7 text-muted sm:text-[15px]">
+              Outside of engineering, I&apos;m a furparent, and my dogs have
+              been beside me through long coding sessions since well before
+              &quot;vibe coding&quot; became a buzzword.
+            </p>
+
+            <div className="mt-5 grid gap-3 sm:grid-cols-[1.18fr_0.82fr]">
+              <div className="overflow-hidden rounded-[1.5rem] border border-line bg-white/78 shadow-card">
+                <Image
+                  src="/assets/personal/dogs/IMG_0569.JPG"
+                  alt="Jorge's dogs beside a laptop during a coding day"
+                  width={1200}
+                  height={1400}
+                  className="h-64 w-full object-cover sm:h-72"
+                />
+              </div>
+              <div className="grid gap-3">
+                <div className="overflow-hidden rounded-[1.5rem] border border-line bg-white/78 shadow-card">
+                  <Image
+                    src="/assets/personal/dogs/IMG_0537.JPG"
+                    alt="A dog photo from Jorge's personal collection"
+                    width={1200}
+                    height={900}
+                    className="h-[8.7rem] w-full object-cover sm:h-[10.4rem]"
+                  />
+                </div>
+                <div className="overflow-hidden rounded-[1.5rem] border border-line bg-white/78 shadow-card">
+                  <Image
+                    src="/assets/personal/dogs/IMG_0624.jpg"
+                    alt="A third dog photo showing Jorge's dogs as coding companions"
+                    width={1200}
+                    height={900}
+                    className="h-[8.7rem] w-full object-cover sm:h-[10.4rem]"
+                  />
+                </div>
               </div>
             </div>
           </div>
