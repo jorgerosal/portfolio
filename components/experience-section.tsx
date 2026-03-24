@@ -1,0 +1,61 @@
+import { ArrowRight } from "lucide-react";
+
+import { Reveal } from "@/components/reveal";
+import { SectionHeading } from "@/components/section-heading";
+import { experience } from "@/data/portfolio";
+
+export function ExperienceSection() {
+  return (
+    <section id="experience" className="border-b border-line">
+      <div className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
+        <Reveal>
+          <SectionHeading
+            eyebrow="Experience"
+            title="Leading delivery across software engineering, automation, and technical execution."
+            description="Recent roles emphasize API integrations, internal SaaS platforms, reporting systems, and team coordination with measurable operational gains."
+          />
+        </Reveal>
+
+        <div className="relative mt-14 space-y-8 before:absolute before:bottom-0 before:left-5 before:top-0 before:w-px before:bg-line sm:before:left-8">
+          {experience.map((item, index) => (
+            <Reveal key={`${item.company}-${item.role}`} delay={index * 0.08}>
+              <article className="relative rounded-[2rem] border border-line bg-white/76 p-7 shadow-card sm:ml-16 sm:p-8">
+                <span className="absolute left-[-2.6rem] top-10 hidden h-4 w-4 rounded-full border-4 border-background bg-accent sm:block" />
+                <div className="flex flex-col gap-5 md:flex-row md:items-start md:justify-between">
+                  <div>
+                    <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent">
+                      {item.company}
+                    </p>
+                    <h3 className="mt-3 font-display text-2xl font-semibold tracking-tight text-foreground">
+                      {item.role}
+                    </h3>
+                    <p className="mt-4 max-w-3xl text-base leading-7 text-muted">
+                      {item.summary}
+                    </p>
+                  </div>
+                  <div className="rounded-full border border-line bg-background/80 px-4 py-2 text-sm font-medium text-foreground">
+                    {item.period}
+                  </div>
+                </div>
+                <div className="mt-8 grid gap-4 md:grid-cols-2">
+                  {item.highlights.map((highlight) => (
+                    <div
+                      key={highlight}
+                      className="flex gap-3 rounded-2xl border border-line bg-background/70 px-4 py-4"
+                    >
+                      <ArrowRight
+                        size={16}
+                        className="mt-1 shrink-0 text-accent"
+                      />
+                      <p className="text-sm leading-7 text-muted">{highlight}</p>
+                    </div>
+                  ))}
+                </div>
+              </article>
+            </Reveal>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
