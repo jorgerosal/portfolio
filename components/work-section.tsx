@@ -134,9 +134,9 @@ function AmazonPaapiVisual() {
 
 function AnalyticsPlatformVisual() {
   return (
-    <DashboardShell tone="green">
-      <div className="p-4">
-        <div className="flex items-center justify-between gap-3 rounded-[1rem] border border-line bg-[#fbfdfb] px-4 py-3">
+    <div className="overflow-hidden rounded-[1.2rem] border border-line bg-[#f4f7f5] p-4">
+      <div className="rounded-[1rem] border border-[#d8e6db] bg-white/90 shadow-card">
+        <div className="flex items-center justify-between border-b border-line px-4 py-3">
           <div>
             <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-accent">
               Internal Platform
@@ -149,21 +149,16 @@ function AnalyticsPlatformVisual() {
             1M+ records processed
           </div>
         </div>
-        <div className="mt-4 grid gap-4 lg:grid-cols-[0.88fr_1.12fr]">
+        <div className="grid gap-4 p-4 lg:grid-cols-[0.95fr_1.05fr]">
           <div className="space-y-4">
-            <div className="rounded-[1rem] border border-line bg-white p-4">
+            <div className="rounded-[1rem] border border-line bg-[#fafcfb] p-4">
               <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-muted">
                 Data Sources
               </p>
-              <div className="mt-4 space-y-2">
-                {["Sales", "Inventory", "Advertising"].map((item) => (
-                  <div
-                    key={item}
-                    className="rounded-xl border border-line bg-background/80 px-4 py-3 text-sm font-medium text-foreground"
-                  >
-                    {item}
-                  </div>
-                ))}
+              <div className="mt-4 grid gap-2 text-[11px] font-medium text-foreground">
+                <div className="rounded-lg border border-line bg-white px-3 py-2">Sales</div>
+                <div className="rounded-lg border border-line bg-white px-3 py-2">Inventory</div>
+                <div className="rounded-lg border border-line bg-white px-3 py-2">Advertising</div>
               </div>
             </div>
             <div className="rounded-[1rem] border border-line bg-white p-4">
@@ -171,20 +166,16 @@ function AnalyticsPlatformVisual() {
                 Processing Layer
               </p>
               <div className="mt-4 flex items-center gap-3">
-                <div className="flex-1 rounded-xl border border-line bg-background/80 px-3 py-4 text-center text-sm font-medium text-foreground">
+                <div className="flex-1 rounded-xl border border-line bg-background/80 px-3 py-3 text-center text-[11px] font-medium text-foreground">
                   Rules Engine
                 </div>
-                <span className="text-accent">+</span>
-                <div className="flex-1 rounded-xl border border-line bg-background/80 px-3 py-4 text-center text-sm font-medium text-foreground">
+                <div className="text-accent">+</div>
+                <div className="flex-1 rounded-xl border border-line bg-background/80 px-3 py-3 text-center text-[11px] font-medium text-foreground">
                   Micro-workers
                 </div>
               </div>
-              <div className="mt-4 rounded-xl border border-dashed border-line bg-[#f7faf8] px-4 py-4 text-center text-xs leading-6 text-muted">
-                criteria-based automation
-                <br />
-                ML-assisted classification
-                <br />
-                background jobs
+              <div className="mt-3 rounded-xl border border-dashed border-line bg-[#f7faf8] px-3 py-3 text-center text-[11px] text-muted">
+                criteria-based automation • ML-assisted classification • background jobs
               </div>
             </div>
           </div>
@@ -192,48 +183,46 @@ function AnalyticsPlatformVisual() {
             <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-muted">
               Decision Support View
             </p>
-            <div className="mt-4 grid gap-3 lg:grid-cols-[1.1fr_0.9fr]">
+            <div className="mt-4 grid gap-3 sm:grid-cols-[1.15fr_0.85fr]">
               <div className="rounded-xl border border-line bg-white p-4">
-                <div className="flex items-end gap-3">
-                  <div className="h-20 w-8 rounded-t-2xl bg-[#c7d1e7]" />
-                  <div className="h-32 w-8 rounded-t-2xl bg-[#9dadd8]" />
-                  <div className="h-[6.5rem] w-8 rounded-t-2xl bg-[#8397cf]" />
-                  <div className="h-[9.5rem] w-8 rounded-t-2xl bg-[#6d83c2]" />
-                  <div className="h-24 w-8 rounded-t-2xl bg-[#8bb39a]" />
+                <div className="flex items-end gap-2">
+                  <div className="h-12 w-5 rounded-t-lg bg-accent/25" />
+                  <div className="h-20 w-5 rounded-t-lg bg-accent/40" />
+                  <div className="h-16 w-5 rounded-t-lg bg-accent/55" />
+                  <div className="h-24 w-5 rounded-t-lg bg-accent/75" />
+                  <div className="h-14 w-5 rounded-t-lg bg-[#8cb59f]" />
                 </div>
-                <div className="mt-6 h-3 rounded-full bg-foreground/10" />
+                <div className="mt-4 h-2 w-3/4 rounded-full bg-foreground/10" />
               </div>
               <div className="space-y-3">
                 <div className="rounded-xl border border-line bg-white p-4">
-                  <div className="h-3 w-16 rounded-full bg-[#8bb39a]" />
-                  <div className="mt-4 h-16 rounded-2xl bg-[#edf5f0]" />
+                  <div className="h-2 w-12 rounded-full bg-[#8cb59f]" />
+                  <div className="mt-3 h-10 rounded-xl bg-[#edf5f0]" />
                 </div>
                 <div className="rounded-xl border border-line bg-white p-4">
-                  <div className="h-3 w-14 rounded-full bg-accent/60" />
-                  <div className="mt-4 h-16 rounded-2xl bg-accent/10" />
+                  <div className="h-2 w-10 rounded-full bg-accent/60" />
+                  <div className="mt-3 h-10 rounded-xl bg-accent/10" />
                 </div>
               </div>
             </div>
             <div className="mt-4 grid gap-3 sm:grid-cols-3">
-              {[
-                ["Visibility", "unified reporting"],
-                ["Scale", "AWS-backed jobs"],
-                ["Outcome", "faster decisions"],
-              ].map(([label, value]) => (
-                <div key={label} className="rounded-xl border border-line bg-white px-3 py-4 text-center">
-                  <p className="text-[10px] uppercase tracking-[0.2em] text-muted">
-                    {label}
-                  </p>
-                  <p className="mt-2 text-sm font-medium leading-6 text-foreground">
-                    {value}
-                  </p>
-                </div>
-              ))}
+              <div className="rounded-xl border border-line bg-white px-3 py-3 text-center">
+                <p className="text-[10px] uppercase tracking-[0.2em] text-muted">Visibility</p>
+                <p className="mt-1 text-xs font-medium text-foreground">unified reporting</p>
+              </div>
+              <div className="rounded-xl border border-line bg-white px-3 py-3 text-center">
+                <p className="text-[10px] uppercase tracking-[0.2em] text-muted">Scale</p>
+                <p className="mt-1 text-xs font-medium text-foreground">AWS-backed jobs</p>
+              </div>
+              <div className="rounded-xl border border-line bg-white px-3 py-3 text-center">
+                <p className="text-[10px] uppercase tracking-[0.2em] text-muted">Outcome</p>
+                <p className="mt-1 text-xs font-medium text-foreground">faster decisions</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </DashboardShell>
+    </div>
   );
 }
 
@@ -396,6 +385,20 @@ function RpaVisual() {
 
 function renderStudyVisual(title: string, imageSrc: string | null, imageAlt: string | null) {
   if (imageSrc) {
+    if (title !== "Amazon Product Advertising API Integration") {
+      return (
+        <div className="overflow-hidden rounded-[1.2rem] border border-line bg-[#f5f6f8]">
+          <Image
+            src={imageSrc}
+            alt={imageAlt || title}
+            width={1222}
+            height={908}
+            className="h-56 w-full object-contain object-center bg-white p-4"
+          />
+        </div>
+      );
+    }
+
     return (
       <DashboardShell tone={title === "Amazon Product Advertising API Integration" ? "blue" : "slate"}>
         <div className="bg-[#fbfcfd] p-4">
