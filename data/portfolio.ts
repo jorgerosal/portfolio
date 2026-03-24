@@ -19,9 +19,24 @@ export const navigation = [
 
 export const heroStats = [
   "10+ Years Experience",
-  "SaaS & Automation",
-  "AWS / React / Node.js",
-  "70% Workflow Reduction",
+  "1M+ Records Processed",
+  "AWS / Node.js / React",
+  "70-80% Manual Work Reduction",
+];
+
+export const heroHighlights = [
+  {
+    label: "Focus",
+    value: "SaaS platforms, analytics systems, automation pipelines",
+  },
+  {
+    label: "Strength",
+    value: "Architecture thinking paired with hands-on delivery",
+  },
+  {
+    label: "Recent edge",
+    value: "AI-assisted workflows for faster implementation and iteration",
+  },
 ];
 
 export const pillars = [
@@ -51,11 +66,12 @@ export const experience = [
     role: "Field Missionary Work",
     period: "September 2023-January 2026",
     summary:
-      "Took a purposeful career break to pursue full-time field missionary work, centered on service, communication, discipline, and community engagement.",
+      "Took a purposeful career break for full-time field missionary work, helping people learn about the Bible in the Philippines and Hong Kong while further developing communication, discipline, empathy, and community engagement.",
     highlights: [
       "Now returning to software and systems work with core engineering fundamentals, architecture experience, and systems thinking intact.",
       "Using modern AI-assisted workflows to accelerate implementation, iteration, and delivery while building on prior full-stack and automation experience.",
     ],
+    emphasis: "transition",
   },
   {
     company: "Amazon",
@@ -69,6 +85,7 @@ export const experience = [
       "Modeled relational SQL schemas for scalable product analytics and reporting.",
       "Deployed and maintained AWS-based infrastructure supporting production services.",
     ],
+    emphasis: "primary",
   },
   {
     company: "Channel Precision",
@@ -83,6 +100,7 @@ export const experience = [
       "Built automation pipelines processing 100,000+ records and reduced manual data processing time by 70%.",
       "Coordinated hybrid engineering teams and owned technical execution from planning through delivery.",
     ],
+    emphasis: "primary",
   },
   {
     company: "Outdoor Equipped",
@@ -96,6 +114,7 @@ export const experience = [
       "Built internal reporting tools and process improvements across operations.",
       "Delivered robotic process automation that reduced manual processing time by 80%.",
     ],
+    emphasis: "primary",
   },
 ];
 
@@ -246,12 +265,14 @@ export const profile = {
   cvHref: "/assets/docs/jorge-rosal-cv.pdf",
   imageSrc: "/assets/images/jorge-rosal.jpg",
   heroHeadline:
-    "Building scalable SaaS systems, workflow automation, and data-driven software for real operational impact.",
+    "Senior full-stack engineer building SaaS systems, automation workflows, and data-driven platforms with measurable operational impact.",
   heroText:
-    "Senior full-stack engineer with 10+ years of experience delivering API-driven platforms, analytics tooling, and cloud-backed systems across engineering and project leadership roles.",
+    "I build production systems that improve visibility, remove manual work, and support better decisions. My background spans API integrations, analytics platforms, AWS-backed services, and technical delivery leadership across internal SaaS and operational software.",
   about:
-    "I design and ship software systems that solve operational problems clearly and reliably. My background spans full-stack engineering, automation architecture, analytics tooling, and technical delivery leadership, with a focus on translating business complexity into maintainable systems built with Node.js, React, SQL, and cloud infrastructure.",
+    "I design and deliver software systems that solve operational problems clearly and reliably. My work sits at the intersection of full-stack engineering, automation architecture, analytics tooling, and delivery leadership, with a consistent focus on turning business complexity into maintainable systems built with Node.js, React, SQL, and cloud infrastructure.",
   careerBreak:
-    "After a purposeful period of full-time field missionary work from September 2023 to January 2026, I am now re-engaging with software and systems development with strong engineering fundamentals, architecture experience, and a modern AI-assisted workflow that helps accelerate implementation and delivery.",
+    "After a purposeful period of full-time field missionary work from September 2023 to January 2026, I am now re-engaging with software and systems development with strong engineering fundamentals, architecture experience, and an AI-assisted workflow that helps accelerate implementation and delivery.",
+  currentFocus:
+    "Currently focused on senior engineering, systems, and technical delivery roles where architecture clarity, execution speed, and business impact matter.",
   education: "Visayas State University, BS in Computer Science (2006-2010)",
 };

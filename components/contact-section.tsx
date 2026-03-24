@@ -47,9 +47,14 @@ export function ContactSection() {
             <div className="rounded-[2rem] border border-line bg-white/78 p-8 shadow-soft sm:p-10">
               <SectionHeading
                 eyebrow="Contact"
-                title="Open to conversations with recruiters, founders, and teams building meaningful software."
-                description="If you need a senior engineer who can move comfortably between product thinking, backend systems, automation, analytics, and technical execution, reach out directly."
+                title="Open to senior engineering, systems, and technical delivery conversations."
+                description="If you need someone who can move between architecture, implementation, automation, and business-aware execution, reach out directly. I am open to conversations with recruiters, founders, hiring managers, and engineering leaders."
               />
+              <div className="mt-8 rounded-[1.5rem] border border-line bg-background/80 p-5">
+                <p className="text-sm leading-7 text-foreground/85">
+                  Best for roles or engagements involving internal platforms, API-heavy systems, automation, analytics workflows, or hands-on technical leadership.
+                </p>
+              </div>
               <div className="mt-10 flex flex-col gap-4 sm:flex-row">
                 <Link
                   href={`mailto:${profile.email}`}

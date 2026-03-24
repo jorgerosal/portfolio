@@ -12,23 +12,31 @@ export function AboutSection() {
         <Reveal>
           <SectionHeading
             eyebrow="About"
-            title="A senior engineer focused on dependable systems and practical outcomes."
+            title="A systems-minded engineer focused on dependable delivery and operational clarity."
             description={profile.about}
           />
           <div className="mt-8 max-w-3xl rounded-[1.75rem] border border-line bg-white/72 p-7 shadow-card">
-            <p className="text-sm uppercase tracking-[0.24em] text-muted">
-              Working Style
-            </p>
-            <p className="mt-4 text-base leading-8 text-muted">
-              My approach combines architecture thinking, hands-on delivery,
-              and project ownership. I work comfortably across product and
-              operational contexts, whether the challenge is integrating
-              external APIs, designing reporting systems, or removing manual
-              work through automation.
-            </p>
-            <p className="mt-5 text-base leading-8 text-muted">
-              {profile.careerBreak}
-            </p>
+            <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
+              <div>
+                <p className="text-sm uppercase tracking-[0.24em] text-muted">
+                  Working Style
+                </p>
+                <p className="mt-4 text-base leading-8 text-muted">
+                  My approach combines architecture thinking, hands-on delivery, and project ownership. I work comfortably across product and operational contexts, whether the challenge is integrating external APIs, designing reporting systems, or removing manual work through automation.
+                </p>
+                <p className="mt-5 text-base leading-8 text-muted">
+                  {profile.currentFocus}
+                </p>
+              </div>
+              <div className="rounded-[1.5rem] border border-line bg-background/80 p-5">
+                <p className="text-sm uppercase tracking-[0.22em] text-muted">
+                  Current Direction
+                </p>
+                <p className="mt-4 text-sm leading-7 text-foreground/85">
+                  {profile.careerBreak}
+                </p>
+              </div>
+            </div>
           </div>
         </Reveal>
 

@@ -71,6 +71,12 @@ export default function RootLayout({
       <body
         className={`${manrope.variable} ${jakarta.variable} bg-background font-sans text-foreground antialiased`}
       >
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-foreground focus:px-4 focus:py-2 focus:text-sm focus:text-white"
+        >
+          Skip to main content
+        </a>
         {children}
       </body>
     </html>

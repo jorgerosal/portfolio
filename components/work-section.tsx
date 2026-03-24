@@ -221,7 +221,7 @@ export function WorkSection() {
           <SectionHeading
             eyebrow="Selected Work"
             title="Representative case studies based on production experience."
-            description="A focused view of API integrations, internal SaaS systems, analytics platforms, large-scale automation, and AWS-hosted operational tooling. These are presented as case-study snapshots, not public product launches."
+            description="A focused view of API integrations, internal SaaS systems, analytics platforms, and automation-heavy operational tooling. Each case study is framed to show the system, the problem it addressed, and the business value it created."
           />
         </Reveal>
 
@@ -286,21 +286,29 @@ export function WorkSection() {
                 </div>
 
                 <div className="flex flex-1 flex-col p-7">
-                  <div className="grid gap-6">
-                    <div>
-                      <p className="text-xs font-semibold uppercase tracking-[0.22em] text-muted">
-                        Summary
-                      </p>
-                      <p className="mt-3 text-base leading-7 text-muted">
-                        {study.summary}
-                      </p>
-                    </div>
+                  <div>
+                    <p className="text-xs font-semibold uppercase tracking-[0.22em] text-muted">
+                      Summary
+                    </p>
+                    <p className="mt-3 text-base leading-7 text-muted">
+                      {study.summary}
+                    </p>
+                  </div>
+                  <div className="mt-6 grid gap-4 lg:grid-cols-2">
                     <div className="rounded-[1.5rem] border border-line bg-background/80 p-5">
                       <p className="text-xs font-semibold uppercase tracking-[0.22em] text-muted">
                         Scope
                       </p>
                       <p className="mt-3 text-sm leading-7 text-foreground/85">
                         {study.context}
+                      </p>
+                    </div>
+                    <div className="rounded-[1.5rem] border border-line bg-background/80 p-5">
+                      <p className="text-xs font-semibold uppercase tracking-[0.22em] text-muted">
+                        Outcome
+                      </p>
+                      <p className="mt-3 text-sm leading-7 text-foreground">
+                        {study.impact}
                       </p>
                     </div>
                   </div>
@@ -318,14 +326,6 @@ export function WorkSection() {
                         {item}
                       </span>
                     ))}
-                  </div>
-                  <div className="mt-6 rounded-[1.5rem] border border-line bg-background/80 p-5">
-                    <p className="text-xs font-semibold uppercase tracking-[0.22em] text-muted">
-                      Outcome
-                    </p>
-                    <p className="mt-3 text-sm leading-7 text-foreground">
-                      {study.impact}
-                    </p>
                   </div>
                   {"link" in study && study.link ? (
                     <div className="mt-6">

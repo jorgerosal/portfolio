@@ -10,7 +10,7 @@ async function readCounter() {
   const raw = await fs.readFile(counterFilePath, "utf8");
   const parsed = JSON.parse(raw) as { count?: number };
 
-  return typeof parsed.count === "number" ? parsed.count : 3245;
+  return typeof parsed.count === "number" ? parsed.count : 10539;
 }
 
 async function writeCounter(count: number) {
@@ -38,7 +38,7 @@ export async function GET() {
     );
   } catch {
     return Response.json(
-      { count: 3245, error: "counter_unavailable" },
+      { count: 10539, error: "counter_unavailable" },
       {
         status: 500,
         headers: {

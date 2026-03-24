@@ -81,6 +81,7 @@ export function Header() {
             <Link
               key={item.href}
               href={item.href}
+              aria-current={activeSection === item.href ? "page" : undefined}
               className={`relative text-sm transition-colors ${
                 activeSection === item.href
                   ? "text-foreground"
@@ -121,6 +122,7 @@ export function Header() {
               <Link
                 key={item.href}
                 href={item.href}
+                aria-current={activeSection === item.href ? "page" : undefined}
                 className={`rounded-2xl px-4 py-3 text-base transition-colors ${
                   activeSection === item.href
                     ? "bg-accent-soft text-foreground"
